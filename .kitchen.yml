@@ -1,13 +1,28 @@
 ---
 driver:
-  name: vagrant
-
-provisioner:
-  name: chef_solo
+  name: ec2
+  aws_access_key_id: <%= ENV['AWS_ACCESS_KEY'] %>
+  aws_secret_access_key: <%= ENV['AWS_SECRET_KEY'] %>
+  aws_ssh_key_id: <%= ENV['AWS_SSH_KEY_ID'] %>
+  ssh_key: <%= File.expand_path('~/.ssh/id_rsa') %>
+  security_group_ids: ["sg-1a2b3c4d"]
+  region: us-east-1
+  availability_zone: us-east-1b
+  require_chef_omnibus: true
 
 platforms:
   - name: ubuntu-12.04
-  - name: centos-6.4
+    driver:
+      image_id: ami-fd20ad94
+      username: ubuntu
+  - name: centos-6.3
+    driver:
+      image_id: ami-ef5ff086
+      username: ec2-user
+
+
+provisioner:
+  name: chef_solo
 
 suites:
   - name: default
