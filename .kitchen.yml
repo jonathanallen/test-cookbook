@@ -8,16 +8,13 @@ driver:
   region: us-east-1
   availability_zone: us-east-1b
   require_chef_omnibus: true
+  flavor_id: t2.small
 
 platforms:
-  - name: ubuntu-12.04
+  - name: ubuntu-14.04
     driver:
-      image_id: ami-fd20ad94
+      image_id: ami-885d89e0
       username: ubuntu
-  - name: centos-6.3
-    driver:
-      image_id: ami-ef5ff086
-      username: ec2-user
 
 
 provisioner:
