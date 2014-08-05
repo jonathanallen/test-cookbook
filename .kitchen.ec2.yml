@@ -8,19 +8,17 @@ driver:
   region: us-east-1
   availability_zone: us-east-1b
   require_chef_omnibus: true
-  flavor_id: m1.small
+  flavor_id: <%= ENV['AWS_INSTANCE_TYPE'] %>
 
 platforms:
-  - name: ubuntu-14.04
-    driver:
-      image_id: ami-c25d89aa
-      username: ubuntu
   - name: centos-6.5
     driver:
       image_id: ami-8997afe0
       username: root
-
-
+  - name: ubuntu-14.04
+    driver:
+      image_id: ami-c25d89aa
+      username: ubuntu
 
 provisioner:
   name: chef_solo
