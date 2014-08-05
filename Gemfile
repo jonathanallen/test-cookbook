@@ -9,7 +9,7 @@ gem "rubocop",    "~> 0.23.0"
 gem "yarjuf"
 
 group :integration do
-  gem "test-kitchen", "~> 1.0"
+  gem "test-kitchen", "~> 1.2.1"
   gem "kitchen-ec2"
   gem "kitchen-vagrant"
 end
