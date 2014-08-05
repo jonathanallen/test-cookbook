@@ -1,3 +1,14 @@
+GIT
+  remote: https://github.com/test-kitchen/test-kitchen.git
+  revision: 4fbc491666fc163ae62dbd3126133cda01a82679
+  specs:
+    test-kitchen (1.2.2.dev)
+      mixlib-shellout (~> 1.2)
+      net-scp (~> 1.1)
+      net-ssh (~> 2.7)
+      safe_yaml (~> 1.0)
+      thor (~> 0.18)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -231,12 +242,6 @@ GEM
     slop (3.4.7)
     solve (0.8.2)
     systemu (2.5.2)
-    test-kitchen (1.2.1)
-      mixlib-shellout (~> 1.2)
-      net-scp (~> 1.1)
-      net-ssh (~> 2.7)
-      safe_yaml (~> 1.0)
-      thor (~> 0.18)
     thor (0.18.1)
     timers (1.1.0)
     treetop (1.4.15)
@@ -273,5 +278,5 @@ DEPENDENCIES
   kitchen-vagrant
   rake
   rubocop (~> 0.23.0)
-  test-kitchen (~> 1.2.1)
+  test-kitchen!
   yarjuf
