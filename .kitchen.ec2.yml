@@ -13,8 +13,8 @@ driver:
 platforms:
   - name: centos-6.5
     driver:
-      image_id: ami-8997afe0
-      username: root
+      image_id: ami-25e1fd4c
+      username: cloud-user
   - name: ubuntu-14.04
     driver:
       image_id: ami-c25d89aa
