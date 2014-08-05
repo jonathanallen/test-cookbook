@@ -15,6 +15,11 @@ platforms:
     driver:
       image_id: ami-c25d89aa
       username: ubuntu
+  - name: centos-6.5
+    driver:
+      image_id: ami-8997afe0
+      username: root
+
 
 
 provisioner:
