@@ -5,7 +5,6 @@ driver:
   aws_secret_access_key: <%= ENV['AWS_SECRET_KEY'] %>
   aws_ssh_key_id: <%= ENV['AWS_SSH_KEY_ID'] %>
   ssh_key: <%= ENV['AWS_SSH_KEY_PATH'] %>
-  security_group_ids: ["sg-1a2b3c4d"]
   region: us-east-1
   availability_zone: us-east-1b
   require_chef_omnibus: true
