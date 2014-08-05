@@ -8,7 +8,7 @@ driver:
   region: us-east-1
   availability_zone: us-east-1b
   require_chef_omnibus: true
-  flavor_id: t2.small
+  flavor_id: m1.small
 
 platforms:
   - name: ubuntu-14.04
