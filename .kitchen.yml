@@ -13,7 +13,7 @@ driver:
 platforms:
   - name: ubuntu-14.04
     driver:
-      image_id: ami-885d89e0
+      image_id: ami-c25d89aa
       username: ubuntu
 
 
