@@ -1,0 +1,27 @@
+---
+driver:
+  name: ec2
+  aws_access_key_id: <%= ENV['AWS_ACCESS_KEY'] %>
+  aws_secret_access_key: <%= ENV['AWS_SECRET_KEY'] %>
+  aws_ssh_key_id: <%= ENV['AWS_SSH_KEY_ID'] %>
+  ssh_key: <%= ENV['AWS_SSH_KEY_PATH'] %>
+  region: us-east-1
+  availability_zone: us-east-1b
+  require_chef_omnibus: true
+  flavor_id: m1.small
+
+platforms:
+  - name: ubuntu-14.04
+    driver:
+      image_id: ami-c25d89aa
+      username: ubuntu
+
+
+provisioner:
+  name: chef_solo
+
+suites:
+  - name: default
+    run_list:
+      - recipe[skeleton::default]
+    attributes:

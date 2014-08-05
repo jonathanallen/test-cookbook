@@ -15,3 +15,5 @@
 # Test Kitchen
 /.kitchen/
 /.kitchen.local.yml
+
+results.xml
